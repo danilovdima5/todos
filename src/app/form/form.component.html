@@ -6,5 +6,7 @@
   <p *ngIf="form.controls.taskName.errors?.['maxlength']">Task name must be at most 50 characters long.</p>
   <p *ngIf="form.controls.taskName.errors?.['email']">Please enter a valid email address.</p>
 
+  <button type="button" routerLink="../list">Go to List</button>
+
   <button type="submit" [disabled]="form.invalid">Add Task</button>
 </form>

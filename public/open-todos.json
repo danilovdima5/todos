@@ -1,0 +1,15 @@
+[
+  {
+    "todoName": "Cook some food",
+    "creationDate": "2026-06-29T13:30:00Z",
+    "dateCompleted": null
+  },{
+    "todoName": "Walk a dog",
+    "creationDate": "2026-06-29T13:30:00Z",
+    "dateCompleted": null
+  },{
+    "todoName": "Clean the house",
+    "creationDate": "2026-06-29T13:30:00Z",
+    "dateCompleted": null
+  }
+]

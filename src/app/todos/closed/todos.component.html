@@ -1,0 +1,15 @@
+<p>Tasks count: {{ tasksCount() }}</p>
+
+<ul>
+  @for (todo of todos(); track $index) {
+    <li>
+      {{ todo.todoName }}
+      {{ todo.creationDate | date: "yy M dd hh mm SS" }}
+      {{ null | yesNo }}
+      {{ undefined | yesNo }}
+      {{ "bla bla" | yesNo }}
+    </li>
+  } @empty {
+    <li>No tasks available.</li>
+  }
+</ul>

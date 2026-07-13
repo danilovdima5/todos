@@ -1,3 +1,1 @@
-<app-form (submitted)="tasksService.addTask($event)" />
-
-<app-list [tasks]="(tasks$ | async) || []" (taskCompleted)="tasksService.removeTask($event)" />
+<router-outlet />
