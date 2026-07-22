@@ -1,10 +1,12 @@
-export type BaseTodo = {
+type BaseTodo = {
   todoName: string;
-  creationDate: string;
 };
 
-export type OpenTodo = BaseTodo;
+export type OpenTodo = BaseTodo & {
+  dateCompleted?: string;
+};
 
-export type CompletedTodo = BaseTodo & {
+export type ClosedTodo = BaseTodo & {
+  id: number;
   dateCompleted: string;
 };

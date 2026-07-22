@@ -9,12 +9,16 @@ export const routes: Routes = [
       {
         path: 'open',
         loadComponent: () =>
-          import('./open/todos.component').then((m) => m.TodosComponent),
+          import('./open/open-todos.component').then(
+            (m) => m.OpenTodosComponent,
+          ),
       },
       {
         path: 'closed',
         loadComponent: () =>
-          import('./closed/todos.component').then((m) => m.TodosComponent),
+          import('./closed/closed-todos.component').then(
+            (m) => m.ClosedTodosComponent,
+          ),
       },
       {
         path: '**',

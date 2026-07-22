@@ -4,6 +4,7 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { BASE_URL } from './common/base-url.token';
+import { provideStore } from '@ngrx/store';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,8 +16,9 @@ export const appConfig: ApplicationConfig = {
     //   useExisting: HttpClient,
     // },
     {
-      provide: BASE_URL,
-      useValue: '',
+        provide: BASE_URL,
+        useValue: '',
     },
-  ],
+    provideStore()
+],
 };

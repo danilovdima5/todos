@@ -8,21 +8,21 @@ import {
 
 import { NgIf } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
-import { BaseTodo } from '../common/todo.model';
+import { OpenTodo } from '../common/todo.model';
 
 @Component({
   selector: 'app-form',
-  imports: [ReactiveFormsModule, NgIf, RouterLink],
+  imports: [ReactiveFormsModule],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
 })
 export class FormComponent {
-  readonly submitted = output<BaseTodo>();
+  readonly submitted = output<OpenTodo>();
 
   readonly router = inject(Router);
 
   readonly form = new FormGroup({
-    taskName: new FormControl('', {
+    todoName: new FormControl('', {
       validators: [
         Validators.required,
         Validators.minLength(3),
@@ -34,7 +34,7 @@ export class FormComponent {
   });
 
   onSubmit(): void {
-    this.submitted.emit(this.form.getRawValue() as any);
+    this.submitted.emit(this.form.getRawValue());
 
     this.form.reset();
   }

@@ -1,10 +1,10 @@
-<p>Tasks count: {{ tasksCount() }}</p>
+<p>Todos count: {{ todosCount() }}</p>
 
 <ul>
   @for (todo of todos(); track $index) {
     <li>
       {{ todo.todoName }}
-      {{ todo.creationDate | date: "yy M dd hh mm SS" }}
+      <!-- {{ todo.creationDate | date: "yy M dd hh mm SS" }} -->
       {{ null | yesNo }}
       {{ undefined | yesNo }}
       {{ "bla bla" | yesNo }}
